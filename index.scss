@@ -75,16 +75,18 @@ article {
 }
 
 .get-scrolling {
-  color: black;
-  border-radius: var(--xl);
+  align-items: center;
   background: rgb(251, 251, 251);
+  border-radius: var(--xl);
   border: 0.8rem solid rgba(72, 127, 62);
   box-shadow: 0.6rem 0.8rem 0 0 rgb(39, 68, 34);
+  color: black;
   cursor: pointer;
+  display: flex;
   font-family: "Lovelo-Black", sans-serif;
   font-size: var(--reg);
-  padding: var(--s) var(--m);
   margin: auto;
+  padding: var(--s) var(--m);
   transition: box-shadow 0.15s ease-in-out;
 
   &:focus,
@@ -100,6 +102,12 @@ article {
     display: block;
     font-size: var(--xs);
     font-style: italic;
+  }
+
+  svg {
+    height: var(--m);
+    width: var(--m);
+    margin-left: var(--xs);
   }
 }
 
