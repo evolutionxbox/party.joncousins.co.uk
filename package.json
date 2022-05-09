@@ -1,6 +1,6 @@
 {
   "name": "party.joncousins.co.uk",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "The site of party.joncousins.co.uk made with ❤️",
   "scripts": {
     "start": "parcel index.html --open",
