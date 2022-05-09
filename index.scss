@@ -71,8 +71,7 @@ a {
 }
 
 article {
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
 }
 
 .get-scrolling {
@@ -87,7 +86,7 @@ article {
   padding: var(--s) var(--m);
   margin: auto;
   transition: box-shadow 0.15s ease-in-out;
-  
+
   &:focus,
   &:hover {
     box-shadow: 0.4rem 0.6rem 0 0 rgb(39, 68, 34);
@@ -109,11 +108,6 @@ article {
     background-attachment: fixed;
     background-size: cover;
     padding: var(--v-gutter) var(--h-gutter);
-
-    &::after {
-      content: '';
-      display: block;
-    }
 
     &:nth-child(1) {
       background-image: url("./img/carson-arias-EMB-s2f5c0A-unsplash.jpg");
@@ -144,7 +138,6 @@ article {
 
   &__header,
   &__body {
-    flex-grow: 1;
     background: white;
     border: 0.8rem solid rgba(72, 127, 62);
     max-width: 80rem;
