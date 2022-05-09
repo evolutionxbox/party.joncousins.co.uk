@@ -3,7 +3,7 @@ domains:
   type: PRIMARY
   zone: joncousins.co.uk
 name: joncousins-party
-region: ams
+region: lon
 static_sites:
 - build_command: npm run build
   environment_slug: html
