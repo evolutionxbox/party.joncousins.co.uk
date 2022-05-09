@@ -3,7 +3,7 @@
   src: url('./fonts/Lovelo-Black.eot');
   src: url('./fonts/Lovelo-Black.eot?#iefix') format('embedded-opentype'),
   url('./fonts/Lovelo-Black.woff2') format('woff2'), url('./fonts/Lovelo-Black.woff') format('woff'), url('./fonts/Lovelo-Black.ttf') format('truetype');
-} 
+}
 
 :root {
   font-size: 62.5%;
@@ -37,6 +37,7 @@
 }
 
 body {
+  background-color: rgb(34, 33, 38);
   color: rgb(78, 79, 78);
   font-family: "IBM Plex Sans", sans-serif;
   margin: 0;
