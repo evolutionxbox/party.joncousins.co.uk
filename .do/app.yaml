@@ -1,0 +1,19 @@
+domains:
+- domain: party.joncousins.co.uk
+  type: PRIMARY
+  zone: joncousins.co.uk
+name: joncousins-party
+region: ams
+static_sites:
+- build_command: npm run build
+  environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: evolutionxbox/party.joncousins.co.uk
+  name: joncousins-party
+  output_dir: dist
+  routes:
+  - path: /
+  source_dir: /
+  error_document: index.html

@@ -1,0 +1,169 @@
+@font-face {
+  font-family: Lovelo-Black;
+  src: url('./fonts/Lovelo-Black.eot');
+  src: url('./fonts/Lovelo-Black.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/Lovelo-Black.woff2') format('woff2'), url('./fonts/Lovelo-Black.woff') format('woff'), url('./fonts/Lovelo-Black.ttf') format('truetype');
+} 
+
+:root {
+  font-size: 62.5%;
+
+  --xl: 4rem;
+  --l: 3.2rem;
+  --m: 2.4rem;
+  --reg: 1.8rem;
+  --s: 1.6rem;
+  --xs: 1.2rem;
+  --v-gutter: 10vh;
+  --h-gutter: 10vw;
+
+  @media screen and (min-width: 23em) {
+    --xl: 4.8rem;
+  }
+
+  @media screen and (min-width: 48em) {
+    --v-gutter: 22vh;
+    --h-gutter: 18vw;
+  }
+
+  @media screen and (min-width: 64em) {
+    --xl: 6.4rem;
+    --l: 4.8rem;
+    --m: 3.2rem;
+    --reg: 2.4rem;
+    --v-gutter: 25vh;
+    --h-gutter: 20vw;
+  }
+}
+
+body {
+  color: rgb(78, 79, 78);
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: var(--reg);
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lovelo-Black", serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--xl);
+}
+
+h2 {
+  font-size: var(--l);
+}
+
+h3 {
+  font-size: var(--m);
+}
+
+a {
+  color: rgba(72, 127, 62);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+.get-scrolling {
+  color: black;
+  border-radius: var(--xl);
+  background: rgb(251, 251, 251);
+  border: 0.8rem solid rgba(72, 127, 62);
+  box-shadow: 0.6rem 0.8rem 0 0 rgb(39, 68, 34);
+  cursor: pointer;
+  font-family: "Lovelo-Black", sans-serif;
+  font-size: var(--reg);
+  padding: var(--s) var(--m);
+  margin: auto;
+  transition: box-shadow 0.15s ease-in-out;
+  
+  &:focus,
+  &:hover {
+    box-shadow: 0.4rem 0.6rem 0 0 rgb(39, 68, 34);
+  }
+
+  &:active {
+    box-shadow: 0.2rem 0.4rem 0 0 rgb(39, 68, 34);
+  }
+
+  small {
+    display: block;
+    font-size: var(--xs);
+    font-style: italic;
+  }
+}
+
+.article {
+  &__section {
+    background-attachment: fixed;
+    background-size: cover;
+    padding: var(--v-gutter) var(--h-gutter);
+
+    &::after {
+      content: '';
+      display: block;
+    }
+
+    &:nth-child(1) {
+      background-image: url("./img/carson-arias-EMB-s2f5c0A-unsplash.jpg");
+      background-position-y: 25%;
+    }
+
+    &:nth-child(2) {
+      background-image: url("./img/kenny-eliason-LoV0EpSG2-M-unsplash.jpg");
+    }
+
+    &:nth-child(3) {
+      background-image: url("./img/marvin-meyer-2SDjvx5jEZQ-unsplash.jpg");
+    }
+
+    &:nth-child(4) {
+      background-image: url("./img/andrew-knechel-gG6yehL64fo-unsplash.jpg");
+    }
+
+    &:nth-child(5) {
+      background-image: url("./img/zane-lee-BbXYnYigR0U-unsplash.jpg");
+    }
+
+    &:nth-child(6) {
+      background-image: url("./img/armando-castillejos-a1GYyF9mt_8-unsplash.jpg");
+      min-height: calc(100vh - (var(--v-gutter) * 2));
+    }
+  }
+
+  &__header,
+  &__body {
+    flex-grow: 1;
+    background: white;
+    border: 0.8rem solid rgba(72, 127, 62);
+    max-width: 80rem;
+    padding: 1.6rem var(--m);
+  }
+
+  &__header {
+    margin: var(--m) auto;
+  }
+
+  &__body {
+    margin: 2.4rem auto;
+    text-align: left;
+
+    &.tl-dr {
+      font-size: var(--reg);
+    }
+
+    h1, h2, h3, h4 {
+      text-align: left;
+    }
+  }
+}
