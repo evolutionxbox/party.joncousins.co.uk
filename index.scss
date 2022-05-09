@@ -17,16 +17,16 @@
   --v-gutter: 10vh;
   --h-gutter: 10vw;
 
-  @media screen and (min-width: 23em) {
-    --xl: 4.8rem;
+  @media (min-width: 23em) {
+    --xl: 4rem;
   }
 
-  @media screen and (min-width: 48em) {
+  @media (min-width: 48em) {
     --v-gutter: 22vh;
     --h-gutter: 18vw;
   }
 
-  @media screen and (min-width: 64em) {
+  @media (min-width: 64em) {
     --xl: 6.4rem;
     --l: 4.8rem;
     --m: 3.2rem;
@@ -107,6 +107,7 @@ article {
   &__section {
     background-attachment: fixed;
     background-size: cover;
+    background-position: center;
     padding: var(--v-gutter) var(--h-gutter);
 
     &:nth-child(1) {
@@ -154,6 +155,10 @@ article {
 
     &.tl-dr {
       font-size: var(--reg);
+
+      h2 {
+        font-size: var(--m);
+      }
     }
 
     h1, h2, h3, h4 {
