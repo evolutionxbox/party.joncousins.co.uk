@@ -110,6 +110,10 @@ article {
     background-position: center;
     padding: var(--v-gutter) var(--h-gutter);
 
+    @supports (-webkit-touch-callout: none) {
+      background-attachment: initial;
+    }
+
     &:nth-child(1) {
       background-image: url("./img/carson-arias-EMB-s2f5c0A-unsplash.jpg");
       background-position-y: 25%;
