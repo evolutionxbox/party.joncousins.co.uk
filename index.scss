@@ -16,6 +16,7 @@
   --xs: 1.2rem;
   --v-gutter: 10vh;
   --h-gutter: 10vw;
+  --primary: rgb( 72, 127, 62);
 
   @media (min-width: 23em) {
     --xl: 4rem;
@@ -67,7 +68,7 @@ h3 {
 }
 
 a {
-  color: rgba(72, 127, 62);
+  color: var(--primary);
 }
 
 article {
@@ -78,7 +79,7 @@ article {
   align-items: center;
   background: rgb(251, 251, 251);
   border-radius: var(--xl);
-  border: 0.8rem solid rgba(72, 127, 62);
+  border: 0.8rem solid var(--primary);
   box-shadow: 0.6rem 0.8rem 0 0 rgb(39, 68, 34);
   color: black;
   cursor: pointer;
@@ -117,6 +118,20 @@ article {
     background-size: cover;
     background-position: center;
     padding: var(--v-gutter) var(--h-gutter);
+    position: relative;
+
+    &::after {
+      border-bottom: 2.4rem double var(--primary);
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 0;
+      left: 0;
+      position: absolute;
+      transform: translateY(1.2rem) skewY(0.7deg);
+      width: 100%;
+      z-index: 1;
+    }
 
     @supports (-webkit-touch-callout: none) {
       background-attachment: initial;
@@ -152,7 +167,7 @@ article {
   &__header,
   &__body {
     background: white;
-    border: 0.8rem solid rgba(72, 127, 62);
+    border: 0.8rem solid var(--primary);
     max-width: 80rem;
     padding: 1.6rem var(--m);
   }
